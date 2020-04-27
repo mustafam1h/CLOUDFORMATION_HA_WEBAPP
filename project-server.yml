@@ -58,7 +58,7 @@ Resources:
             apt-get install apache2 -y
             systemctl start apache2.service
             cd /var/www/html
-            echo "Welcome to project 2 " >index.html
+            echo "it works! Udagram, Udacity" >index.html
       ImageId: ami-07ebfd5b3428b6f4d 
       SecurityGroups:
       - Ref: WebServerSecGroup
@@ -73,7 +73,7 @@ Resources:
     Properties:
       VPCZoneIdentifier:
       - Fn::ImportValue: 
-          !Sub "${EnvironmentName}-PUB1-SN"
+          !Sub "${EnvironmentName}-PRIV-NETS"
       LaunchConfigurationName:
         Ref: WebAppLaunchConfig
       MinSize: '3'
