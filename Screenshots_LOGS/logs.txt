@@ -1,0 +1,12 @@
+$ ./create.sh hawebapp network.yml network-parameters.json
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:291671365597:stack/hawebapp/15247e40-88b6-11ea-9f17-12c9c271ca70"
+}
+
+$ ./create.sh haservers project-server.yml server-parameters.json
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:291671365597:stack/haservers/f517dad0-88b9-11ea-ac4f-12a640cb526e"
+}
+
+
+DNS : http://haser-webap-1f7gc07lfrxx8-621540482.us-east-1.elb.amazonaws.com/
